@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int only_1_main()
 {
     std::cout << "Hello new World! \n";
     return 0;
