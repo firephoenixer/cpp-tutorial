@@ -6,7 +6,20 @@
 int main()
 {
     std::cout << "Beginning of a test..." << std::endl;
+
+    // test hello world
     helloWorld();
+
+    // test reference in c++
+    use_reference();
+
+
+
+
+
+
+
+
     std::cout << "Ending of a test..." << std::endl;
     return 0;
 }
