@@ -10,8 +10,8 @@ private:
 	int m_ordinary = 2;
 
 public:
-
-	int iTest = 1;
+	// static in class means this variable or function is belonged to the class, not any instance of this class!
+	static int s_iTest;
 
 
 
@@ -19,7 +19,8 @@ public:
 public:
 
 
-	void test_function();
+	static void s_function();
+
 	void set_level(int level);
 	void error(const char *pMsg);
 	void wran(const char* pMsg);

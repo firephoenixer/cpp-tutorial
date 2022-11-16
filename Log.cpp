@@ -1,11 +1,11 @@
 #include "Log.h"
 
+int Log::s_iTest = 101;
 
-
-
-void Log::test_function()
+// static function, dont add static here, allready did it in h file
+void Log::s_function()
 {
-	std::cout << "Log class test." << std::endl;
+	std::cout << "Log class test. static iTest:" << Log::s_iTest << std::endl;
 	return;
 }
 

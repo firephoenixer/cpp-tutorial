@@ -1,5 +1,7 @@
 #include <iostream>
 
+// static here means this variable can only seen in this file.
+static int iNum;
 
 // creat a test function, show how to organize functions in c++
 void helloWorld()

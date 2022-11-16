@@ -4,6 +4,8 @@
 #include "tools.h"
 #include "Log.h"
 
+
+
 int main()
 {
     std::cout << "Beginning of a test..." << std::endl;
@@ -22,6 +24,7 @@ int main()
     */
 
     // use Log class as a example of log output in console
+    Log::s_function();
     Log log;
     log.set_level(1);    // 0:error, 1:warning, 2:ordinary
     log.error("fatal error!");
