@@ -2,16 +2,17 @@
 // This file manage the testing of every syntax.
 #include <iostream>
 #include "tools.h"
+#include "Log.h"
 
 int main()
 {
     std::cout << "Beginning of a test..." << std::endl;
 
     // test hello world
-    helloWorld();
+    //helloWorld();
 
     // test reference in c++
-    use_reference();
+    //use_reference();
 
     /*  The only difference between struct and class is that 
     *        the members in struct are defaultly public
@@ -20,7 +21,9 @@ int main()
     *              use class to organise data and programme structure.
     */
 
-
+    // use Log class as a example of log output in console
+    Log log;
+    log.test_function();
 
 
 
