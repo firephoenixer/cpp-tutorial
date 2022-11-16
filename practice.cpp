@@ -13,7 +13,12 @@ int main()
     // test reference in c++
     use_reference();
 
-
+    /*  The only difference between struct and class is that 
+    *        the members in struct are defaultly public
+    *        the members in class are defaultly private.
+    *   We usually use struct to organise data structure only.
+    *              use class to organise data and programme structure.
+    */
 
 
 
