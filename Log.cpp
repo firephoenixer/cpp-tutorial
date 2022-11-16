@@ -9,33 +9,33 @@ void Log::s_function()
 	return;
 }
 
-void Log::set_level(int level)
+void Log::set_level(int _level)
 {
-	m_level = level;
+	m_level = (Log::level)_level;
 	return;
 }
 
 void Log::error(const char* pMsg)
 {
-	if (m_level >= m_error)
+	if (m_level >= Error)
 	{
 		std::cout <<"[ERROR] " << pMsg << std::endl;
 	}
 }
 
-void Log::wran(const char* pMsg)
+void Log::warn(const char* pMsg)
 {
-	if (m_level >= m_warning)
+	if (m_level >= Warning)
 	{
 		std::cout << "[WARN] " << pMsg << std::endl;
 	}
 }
 
-void Log::ordin(const char* pMsg)
+void Log::info(const char* pMsg)
 {
-	if (m_level >= m_ordinary)
+	if (m_level >= Info)
 	{
-		std::cout << "[ORDIN] " << pMsg << std::endl;
+		std::cout << "[INFO] " << pMsg << std::endl;
 	}
 }
 

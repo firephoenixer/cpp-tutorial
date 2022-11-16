@@ -28,8 +28,8 @@ int main()
     Log log;
     log.set_level(1);    // 0:error, 1:warning, 2:ordinary
     log.error("fatal error!");
-    log.wran("may cause a error but not sure.");
-    log.ordin("have same message to show.");
+    log.warn("may cause a error but not sure.");
+    log.info("have same message to show.");
 
 
 

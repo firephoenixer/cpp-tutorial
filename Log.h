@@ -4,10 +4,14 @@
 class Log
 {
 private:
-	int m_level = 0;  // 0:error, 1:warning, 2:ordinary
-	int m_error = 0;
-	int m_warning = 1;
-	int m_ordinary = 2;
+	// enum seems make a new type of variable, make programme structure more logical.
+	enum level: unsigned char
+	{
+		Error = 0, Warning, Info
+	};
+	level m_level = Error;  // 0:error, 1:warning, 2:ordinary
+
+	
 
 public:
 	// static in class means this variable or function is belonged to the class, not any instance of this class!
@@ -23,8 +27,8 @@ public:
 
 	void set_level(int level);
 	void error(const char *pMsg);
-	void wran(const char* pMsg);
-	void ordin(const char* pMsg);
+	void warn(const char* pMsg);
+	void info(const char* pMsg);
 
 
 
