@@ -25,5 +25,14 @@ public:
 	// =0 will make Entity a abstract class, witch can't be instanced, we can use {} instead if do need instance.
 	// But it will lost the force of override the pure virtual function. Use this carefully.
 	virtual float calc_combat_effect() { return 0; };
+
+// this kind members only can be used in this class or frendly class
+private:
+	int iPrivate;
+
+// this kind members only can be used in this class and its sub class
+protected:
+	int iProtected;
+
 };
 
