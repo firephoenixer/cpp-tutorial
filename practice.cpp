@@ -35,8 +35,13 @@ int main()
     log.info("class test:");
     Player heroEpic("EpicBL");  // seems the string in c++ is different from c
 
-
-
+    // test virtual function
+    Entity* pEntity;
+    pEntity = &heroEpic;
+    pEntity->show_name();               // will show "EpicBL"
+    Entity houseMarket("Market Hall");  // will show "Market Hall"
+    pEntity = &houseMarket;             // so virtual function can call by the essence of object
+    pEntity->show_name();               // instead of calling a fixed function
 
 
 

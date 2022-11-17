@@ -16,14 +16,14 @@ public:
 	
 
 	// This creator function
-	Player(const char *pNike)
+	Player(const char *pNike):Entity(pNike)
 	{
-		x = 0;
-		y = 0;
+		//x = 0;
+		//y = 0;
 		blood = 100;
 		energy = 100;
 		level = 1;
-		pName = pNike;
+		//pName = pNike;
 		std::cout << "Player " << pName << " has been created!" << std::endl;
 	}
 
@@ -37,6 +37,7 @@ public:
 
 	// to move object to dx dy
 	int move(int dx, int dy);
+	void show_name();
 };
 
 

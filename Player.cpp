@@ -11,7 +11,12 @@ int Player::move(int dx, int dy)
 }
 
 
-
+// show name of this object
+void Player::show_name()
+{
+	std::cout << "Name: " << pName << std::endl;
+	return;
+}
 
 
 
