@@ -1,15 +1,19 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include "Entity.h"
 
-class Player
+// inheritance form a father class, then we won't need create a new class when the classes have some kind of relationship.
+class Player: public Entity
 {
 public:
-	int x, y;
+	// These two member variables, the father class already have.
+	//int x, y;
+	//const char* pName;
 	float blood;
 	float energy;
 	unsigned int level;
-	const char* pName;
+	
 
 	// This creator function
 	Player(const char *pNike)
