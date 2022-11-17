@@ -38,7 +38,8 @@ public:
 	// to move object to dx dy
 	int move(int dx, int dy);
 	void show_name();
-	void show_message();
+	void show_message() override;  // override make compile check and make sure it's a virtual function.
+	                               // It can make the logical more strongly.
 };
 
 
