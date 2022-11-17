@@ -35,6 +35,18 @@ int main()
     log.info("class test:");
     Player heroEpic("EpicBL");  // seems the string in c++ is different from c
 
+
+
+
+
+
+
+
+
+
+
+
+
     std::cout << "Ending of a test..." << std::endl;
     return 0;
 }

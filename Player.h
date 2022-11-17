@@ -2,8 +2,6 @@
 #include <iostream>
 #include <string.h>
 
-#define MAX_NAME 100
-
 class Player
 {
 public:
@@ -11,7 +9,7 @@ public:
 	float blood;
 	float energy;
 	unsigned int level;
-	char* pName[MAX_NAME];
+	const char* pName;
 
 	// This creator function
 	Player(const char *pNike)
@@ -21,10 +19,7 @@ public:
 		blood = 100;
 		energy = 100;
 		level = 1;
-		if(strlen(pNike) < MAX_NAME)
-			memcpy(pName, pNike, strlen(pNike));
-		else
-			memcpy(pName, pNike, MAX_NAME -1);
+		pName = pNike;
 		std::cout << "Player " << pName << " has been created!" << std::endl;
 	}
 
@@ -36,5 +31,9 @@ public:
 	}
 
 
+	// to move object to dx dy
+	int move(int dx, int dy);
 };
+
+
 
