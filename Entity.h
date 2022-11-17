@@ -17,5 +17,6 @@ public:
 	// show name of this object
 	// If a function is virtual, means it will be changed by the changing of its essence (in sub class)!
 	virtual void show_name();
+	virtual void show_message();
 };
 

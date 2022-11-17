@@ -38,6 +38,7 @@ public:
 	// to move object to dx dy
 	int move(int dx, int dy);
 	void show_name();
+	void show_message();
 };
 
 

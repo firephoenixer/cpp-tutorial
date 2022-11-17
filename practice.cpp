@@ -38,10 +38,10 @@ int main()
     // test virtual function
     Entity* pEntity;
     pEntity = &heroEpic;
-    pEntity->show_name();               // will show "EpicBL"
-    Entity houseMarket("Market Hall");  // will show "Market Hall"
-    pEntity = &houseMarket;             // so virtual function can call by the essence of object
-    pEntity->show_name();               // instead of calling a fixed function
+    pEntity->show_message();               // will show "EpicBL"
+    Entity houseMarket("Market Hall");     // will show "Market Hall"
+    pEntity = &houseMarket;                // so virtual function can call by the essence of object
+    pEntity->show_message();               // instead of calling a fixed function
 
 
 

@@ -19,6 +19,13 @@ void Player::show_name()
 }
 
 
+// show all the message of this object
+void Player::show_message()
+{
+	std::cout << "Name: " << pName << " -- Blood:" << blood << " Energy:" << energy << std::endl;
+	return;
+}
+
 
 
 
