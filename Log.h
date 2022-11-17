@@ -5,7 +5,7 @@ class Log
 {
 private:
 	// enum seems make a new type of variable, make programme structure more logical.
-	enum level: unsigned char
+	enum level: int
 	{
 		Error = 0, Warning, Info
 	};

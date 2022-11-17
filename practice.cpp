@@ -3,7 +3,7 @@
 #include <iostream>
 #include "tools.h"
 #include "Log.h"
-
+#include "Player.h"
 
 
 int main()
@@ -24,14 +24,16 @@ int main()
     */
 
     // use Log class as a example of log output in console
-    Log::s_function();
+    //Log::s_function();
     Log log;
-    log.set_level(1);    // 0:error, 1:warning, 2:ordinary
-    log.error("fatal error!");
-    log.warn("may cause a error but not sure.");
-    log.info("have same message to show.");
+    log.set_level(2);    // 0:error, 1:warning, 2:ordinary
+    //log.error("fatal error!");
+    //log.warn("may cause a error but not sure.");
+    //log.info("have same message to show.");
 
-
+    // show class feature
+    log.info("class test:");
+    Player heroEpic("EpicBL");  // seems the string in c++ is different from c
 
     std::cout << "Ending of a test..." << std::endl;
     return 0;
