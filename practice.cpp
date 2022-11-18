@@ -43,6 +43,9 @@ int main()
     pEntity = &houseMarket;                // so virtual function can call by the essence of object
     pEntity->show_message();               // instead of calling a fixed function
 
+    // test string usage
+    test_string();
+
 
 
 
