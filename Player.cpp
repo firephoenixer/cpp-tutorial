@@ -12,7 +12,7 @@ int Player::move(int dx, int dy)
 
 
 // show name of this object
-void Player::show_name()
+void Player::show_name()  const  // const here mean a promision not the change any member variable
 {
 	std::cout << "Name: " << pName << std::endl;
 	return;

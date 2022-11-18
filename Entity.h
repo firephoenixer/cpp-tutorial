@@ -12,6 +12,8 @@ public:
 		pName = pStr;
 		x = 0;
 		y = 0;
+		iPrivate = 0;
+		iProtected = 0;
 	}
 
 	// show name of this object
