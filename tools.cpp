@@ -66,6 +66,30 @@ void test_string()
 }
 
 
+// test Ternary operator in cpp
+void test_ternary()
+{
+	int m = 5, n = 8, c = 3;
+	int i;
+
+	i = c < n ? m : n;  // if condition true , get front one , or last one
+	std::cout << "i = c < n ? m : n;  i = " << i << std::endl;  // 5
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

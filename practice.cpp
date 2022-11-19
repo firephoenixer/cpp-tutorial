@@ -49,6 +49,8 @@ int main()
     // test string usage
     // test_string();
 
+    // test ternary
+    test_ternary();
 
 
 
