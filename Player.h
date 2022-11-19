@@ -18,7 +18,8 @@ public:
 	int n1, n2, n3;  // test initialize before {}
 
 	// This creator function
-	Player(const char *pNike)
+	// explicit means you can't use -- Player aplayer = "Mike" -- (implicit mode) to create a instance
+	explicit Player(const char *pNike)
 		:Entity(pNike), n1(0), n2(1), n3(0)
 	{
 		//x = 0;
