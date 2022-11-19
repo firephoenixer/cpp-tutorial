@@ -15,10 +15,11 @@ public:
 	unsigned int level;
 	// mutable makes this variable can be changed even in const function
 	mutable unsigned int times_of_show_name;
-	
+	int n1, n2, n3;  // test initialize before {}
 
 	// This creator function
-	Player(const char *pNike):Entity(pNike)
+	Player(const char *pNike)
+		:Entity(pNike), n1(0), n2(1), n3(0)
 	{
 		//x = 0;
 		//y = 0;
