@@ -37,22 +37,29 @@ int main()
     heroEpic.show_name();
 
     // test virtual function
-    Entity* pEntity;
-    pEntity = &heroEpic;
-    pEntity->show_message();               // will show "EpicBL", with blood and energy
-    pEntity->show_name();                  // not virtual, won't show call times
-    Entity houseMarket("Market Hall");     // will show "Market Hall"
-    pEntity = &houseMarket;                // so virtual function can call by the essence of object
-    pEntity->show_message();               // instead of calling a fixed function
-    pEntity->show_name();
+    //Entity* pEntity;
+    //pEntity = &heroEpic;
+    //pEntity->show_message();               // will show "EpicBL", with blood and energy
+    //pEntity->show_name();                  // not virtual, won't show call times
+    //Entity houseMarket("Market Hall");     // will show "Market Hall"
+    //pEntity = &houseMarket;                // so virtual function can call by the essence of object
+    //pEntity->show_message();               // instead of calling a fixed function
+    //pEntity->show_name();
 
     // test string usage
     // test_string();
 
     // test ternary
-    test_ternary();
+    // test_ternary();
 
-
+    // new operator, set the data on the heap instead of stack, the heap has more space for programme.
+    int* pAnInt = new int;
+    int* pIntArray = new int[52];
+    Player* pPlayer = new Player("alpha");
+    pPlayer->show_name();
+    delete pAnInt;
+    delete[] pIntArray;  // we must delete what we created in the heap, [] delete a array
+    delete pPlayer;
 
 
 
