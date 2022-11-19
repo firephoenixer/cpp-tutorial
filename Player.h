@@ -44,6 +44,8 @@ public:
 	void show_name()  const;
 	void show_message() override;  // override make compile check and make sure it's a virtual function.
 	                               // It can make the logical more strongly.
+	void operator+(const int& distance);
+	void show_position();
 };
 
 

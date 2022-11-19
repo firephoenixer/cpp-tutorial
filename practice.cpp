@@ -53,15 +53,18 @@ int main()
     // test_ternary();
 
     // new operator, set the data on the heap instead of stack, the heap has more space for programme.
-    int* pAnInt = new int;
-    int* pIntArray = new int[52];
-    Player* pPlayer = new Player("alpha");
-    pPlayer->show_name();
-    delete pAnInt;
-    delete[] pIntArray;  // we must delete what we created in the heap, [] delete a array
-    delete pPlayer;
+    //int* pAnInt = new int;
+    //int* pIntArray = new int[52];
+    //Player* pPlayer = new Player("alpha");
+    //pPlayer->show_name();
+    //delete pAnInt;
+    //delete[] pIntArray;  // we must delete what we created in the heap, [] delete a array
+    //delete pPlayer;
 
-
+    // test operator + overloading
+    heroEpic.show_position();
+    heroEpic + 1;  // so the essence of operator overloading is a kind of function
+    heroEpic.show_position();
 
 
 

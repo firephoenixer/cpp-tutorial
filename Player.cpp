@@ -28,6 +28,26 @@ void Player::show_message()
 }
 
 
+// show the usage of operator overloading
+// move a player's position by player + 1
+// seems the operator still need two participants, when it is class function already has "this" given.
+void Player::operator+(const int& distance)
+{
+	this->x += distance;
+	this->y += distance;
+	return;
+}
+
+
+// show all the position of this object
+void Player::show_position()
+{
+	std::cout << "Name: " << pName << " -- x:" << x << " y:" << y << std::endl;
+	return;
+}
+
+
+
 
 
 
