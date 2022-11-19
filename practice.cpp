@@ -34,17 +34,20 @@ int main()
     // show class feature
     log.info("class test:");
     Player heroEpic("EpicBL");  // seems the string in c++ is different from c
+    heroEpic.show_name();
 
     // test virtual function
     Entity* pEntity;
     pEntity = &heroEpic;
-    pEntity->show_message();               // will show "EpicBL"
+    pEntity->show_message();               // will show "EpicBL", with blood and energy
+    pEntity->show_name();                  // not virtual, won't show call times
     Entity houseMarket("Market Hall");     // will show "Market Hall"
     pEntity = &houseMarket;                // so virtual function can call by the essence of object
     pEntity->show_message();               // instead of calling a fixed function
+    pEntity->show_name();
 
     // test string usage
-    test_string();
+    // test_string();
 
 
 

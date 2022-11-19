@@ -13,6 +13,8 @@ public:
 	float blood;
 	float energy;
 	unsigned int level;
+	// mutable makes this variable can be changed even in const function
+	mutable unsigned int times_of_show_name;
 	
 
 	// This creator function
@@ -23,7 +25,7 @@ public:
 		blood = 100;
 		energy = 100;
 		level = 1;
-		//pName = pNike;
+		times_of_show_name = 0;
 		std::cout << "Player " << pName << " has been created!" << std::endl;
 	}
 
