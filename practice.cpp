@@ -62,12 +62,12 @@ int main()
     //delete pPlayer;
 
     // test operator + overloading
-    heroEpic.show_position();
-    heroEpic + 1;  // so the essence of operator overloading is a kind of function
-    heroEpic.show_position();
+    //heroEpic.show_position();
+    //heroEpic + 1;  // so the essence of operator overloading is a kind of function
+    //heroEpic.show_position();
 
-
-
+    // test smart pointer
+    test_smart_pointers();
 
 
     std::cout << "Ending of a test..." << std::endl;

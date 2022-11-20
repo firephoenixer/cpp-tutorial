@@ -2,9 +2,24 @@
 #include <string>
 #include <locale>
 #include <codecvt>
+#include <memory>  // use smart pointer 
 
 // static here means this variable can only seen in this file.
 static int iNum;
+
+// create a class just for code learn test
+class TestClass
+{
+public:
+	TestClass()
+	{
+		std::cout << "Construction of TestClass invoked." << std::endl;
+	}
+	~TestClass()
+	{
+		std::cout << "Destruction of TestClass  invoked." << std::endl;
+	}
+};
 
 // creat a test function, show how to organize functions in c++
 void helloWorld()
@@ -78,7 +93,31 @@ void test_ternary()
 }
 
 
+// test smart pointers
+void test_smart_pointers()
+{
+	std::cout << "Test of smart pointer beginning ... ...  " << std::endl;  
+	std::unique_ptr<int> uniPtr1 = std::make_unique<int>(25);
+	std::cout << "uniPtr1 = " << uniPtr1 << ", *uniPtr1 = " << *uniPtr1 << std::endl;  
+	std::unique_ptr<int> uniPtr2 = std::move(uniPtr1);  // We mustn't use uniPtr1 any more!
+	std::cout << "uniPtr2 = " << uniPtr2 << ", *uniPtr2 = " << *uniPtr2 << std::endl;
 
+	// test share pointer, when all the share pointers gone then the instance will be killed and free the space auto. 
+	std::shared_ptr<TestClass> shPtr1(new TestClass());
+	std::cout << "shPtr1 count = " << shPtr1.use_count() << std::endl;
+	std::shared_ptr<TestClass> shPtr2 = shPtr1;
+	std::cout << "shPtr1 count = " << shPtr1.use_count() << std::endl;
+
+	// test weak pointer
+	std::weak_ptr<TestClass> wePtr;
+	wePtr = shPtr1;
+	std::cout << "shPtr1 count = " << shPtr1.use_count() << std::endl;  // still 2, weak pointer won't add count
+	// so weak pointer used for muli times occation.
+
+
+	std::cout << "Test of smart pointer ended     ... ...  " << std::endl;  
+
+}
 
 
 
